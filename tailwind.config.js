@@ -1,3 +1,4 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -21,6 +22,10 @@ module.exports = {
         TEXT: "18px",
         SM_TEXT: "16px",
         XS_TEXT: "14px",
+      },
+      fontFamily: {
+        RW: ["var(--font-rw)", ...fontFamily.sans],
+        GR: ["var(--font-gr)", ...fontFamily.sans],
       },
     },
   },

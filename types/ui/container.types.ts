@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
+import { IFCWithChildren } from "../global.types";
 
-export interface IContainer {
+export interface IContainer extends IFCWithChildren {
   className: string;
-  children: ReactNode;
 }

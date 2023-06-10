@@ -27,6 +27,9 @@ module.exports = {
         RW: ["var(--font-rw)", ...fontFamily.sans],
         GR: ["var(--font-gr)", ...fontFamily.sans],
       },
+      gridTemplateColumns: {
+        HEADER: "1fr 410px 1fr",
+      },
     },
   },
   plugins: [],

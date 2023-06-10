@@ -1,6 +1,8 @@
+import Header from "@/components/header/Header";
 import "./globals.css";
 import { Raleway } from "next/font/google";
 import localFont from "next/font/local";
+import GlobalProvider from "@/providers/GlobalProvider";
 
 const raleway = Raleway({
   subsets: ["latin-ext", "cyrillic-ext"],
@@ -32,9 +34,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${gilroy.variable}`}>
-        {children}
-      </body>
+      <GlobalProvider>
+        <body className={`${raleway.variable} ${gilroy.variable}`}>
+          <Header />
+          {children}
+        </body>
+      </GlobalProvider>
     </html>
   );
 }

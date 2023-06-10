@@ -9,11 +9,11 @@ const raleway = Raleway({
 const gilroy = localFont({
   src: [
     {
-      path: "/assets/fonts/Gilroy-Light.otf",
+      path: "../public/assets/fonts/Gilroy-Light.otf",
       weight: "400",
     },
     {
-      path: "/assets/fonts/Gilroy-ExtraBold.otf",
+      path: "../public/assets/fonts/Gilroy-ExtraBold.otf",
       weight: "700",
     },
   ],

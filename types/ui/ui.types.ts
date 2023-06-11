@@ -1,4 +1,5 @@
 import { IStateDispatch } from "../global.types";
+import { ILanguageState } from "./language.types";
 
 export interface ISearchFocus {
   searchFocus: boolean;
@@ -7,4 +8,5 @@ export interface ISearchFocus {
 
 export interface IUIContext {
   searchFocus: ISearchFocus;
+  languageOpen: ILanguageState;
 }

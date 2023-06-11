@@ -1,4 +1,5 @@
 "use client";
+import { v4 } from "uuid";
 import { motion } from "framer-motion";
 import DataContext from "@/contexts/DataContext";
 import languages from "@/settings/languages";
@@ -17,6 +18,7 @@ const LanguageDropdown = () => {
     >
       {languages.map((lang) => (
         <motion.li
+          key={v4()}
           className="p-2 font-GR text-BLACK"
           onClick={() => {
             setLanguage(lang);

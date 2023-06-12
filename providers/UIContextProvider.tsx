@@ -10,6 +10,12 @@ const UIContextProvider = ({ children }: IFCWithChildren) => {
     [searchFocus, setSearchFocus]
   );
 
+  const [newsletterFocus, setNewsletterFocus] = useState(false);
+  const newsletterFocusMemo = useMemo(
+    () => ({ newsletterFocus, setNewsletterFocus }),
+    [newsletterFocus, setNewsletterFocus]
+  );
+
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageOpenMemo = useMemo(
     () => ({ languageOpen, setLanguageOpen }),
@@ -17,7 +23,11 @@ const UIContextProvider = ({ children }: IFCWithChildren) => {
   );
   return (
     <UIContext.Provider
-      value={{ searchFocus: searchFocusMemo, languageOpen: languageOpenMemo }}
+      value={{
+        searchFocus: searchFocusMemo,
+        languageOpen: languageOpenMemo,
+        newsletterFocus: newsletterFocusMemo,
+      }}
     >
       {children}
     </UIContext.Provider>

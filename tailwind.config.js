@@ -29,6 +29,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         HEADER: "1fr 410px 1fr",
+        FOOTER: "auto 410px",
       },
     },
   },

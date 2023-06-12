@@ -1,7 +1,7 @@
 import Container from "../Container";
 import Language from "./Language";
 import Links from "./Links";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 import Title from "./Title";
 
 const Header = () => {

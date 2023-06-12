@@ -1,4 +1,5 @@
 "use client";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import DataContext from "@/contexts/DataContext";
@@ -6,12 +7,16 @@ import { useContext } from "react";
 import LanguageDropdown from "./LanguageDropdown";
 import UIContext from "@/contexts/UIContext";
 import { languageVariants } from "@/animations/language.animations";
+import { useOnClickOutside } from "usehooks-ts";
 
 const Language = () => {
   const { language } = useContext(DataContext).language;
   const { languageOpen, setLanguageOpen } = useContext(UIContext).languageOpen;
+  const ref = useRef<HTMLDivElement>(null);
+  useOnClickOutside(ref, () => setLanguageOpen(false));
   return (
     <div
+      ref={ref}
       className="language flex gap-2 items-center relative cursor-pointer"
       onClick={() => setLanguageOpen(!languageOpen)}
     >

@@ -10,6 +10,7 @@ import UIContext from "@/contexts/UIContext";
 const LanguageDropdown = () => {
   const { language, setLanguage } = useContext(DataContext).language;
   const { languageOpen, setLanguageOpen } = useContext(UIContext).languageOpen;
+
   return (
     <motion.ul
       className="language-dropdown absolute right-0 top-[35px] rounded-lg overflow-hidden w-full shadow-lg border border-solid border-BG"

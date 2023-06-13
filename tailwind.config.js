@@ -27,9 +27,13 @@ module.exports = {
         RW: ["var(--font-rw)", ...fontFamily.sans],
         GR: ["var(--font-gr)", ...fontFamily.sans],
       },
+      gridTemplateRows: {
+        HERO_HORIZONTAL: "1fr 1fr",
+      },
       gridTemplateColumns: {
         HEADER: "1fr 410px 1fr",
         FOOTER: "auto 410px",
+        HERO: "1fr 1fr",
       },
     },
   },

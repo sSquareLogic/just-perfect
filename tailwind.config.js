@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         GREEN: "#BEFA1B",
+        GREEN_HOVER: "#98c815",
         BLACK: "#2D2D2D",
         GRAY: "#6A6A6A",
         WHITE: "#FFFFFF",
@@ -34,6 +35,10 @@ module.exports = {
         HEADER: "1fr 410px 1fr",
         FOOTER: "auto 410px",
         HERO: "1fr 1fr",
+        TWO_FR: "1fr 1fr",
+      },
+      boxShadow: {
+        CARD: "0px 4px 16px rgba(0, 0, 0, 0.25)",
       },
     },
   },

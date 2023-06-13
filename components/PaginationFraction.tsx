@@ -5,9 +5,10 @@ import Image from "next/image";
 interface IProps {
   swiper?: SwiperClass;
   pages: number;
+  activeIndex: number;
 }
 
-const PaginationFraction = ({ swiper, pages }: IProps) => {
+const PaginationFraction = ({ swiper, pages, activeIndex }: IProps) => {
   return (
     <div className="pagination flex items-center gap-4 w-fit">
       <motion.button
@@ -27,7 +28,7 @@ const PaginationFraction = ({ swiper, pages }: IProps) => {
         />
       </motion.button>
       <p className="font-GR text-BLACK text-TEXT font-bold">
-        {swiper?.activeIndex} / <span className="text-[#CCCCCC]">{pages}</span>
+        {activeIndex} / <span className="text-[#CCCCCC]">{pages}</span>
       </p>
       <motion.button
         variants={{ active: { x: "10px" } }}

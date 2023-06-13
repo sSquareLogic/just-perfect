@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <main className="main">
       <Hero />
-      <Container>
+      <Container className="mb-10">
         <CartSwiper items={newCards} title="Новинки" />
       </Container>
     </main>

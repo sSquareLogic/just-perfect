@@ -19,26 +19,31 @@ interface IProps {
 
 const CardSwiper = ({ items, title }: IProps) => {
   const [controlledSwiper, setControlledSwiper] = useState<SwiperClass>();
-  console.log(controlledSwiper?.activeIndex);
+  const [activeIndex, setActiveIndex] = useState<number>(1);
   return (
     <div className="card-swiper flex flex-col gap-8">
       <div className="flex items-center gap-8 justify-between">
         <h5 className="text-BLACK text-SM_TITLE font-RW font-bold">{title}</h5>
         <PaginationFraction
           swiper={controlledSwiper}
+          activeIndex={activeIndex}
           pages={Math.ceil(items.length / 4)}
         />
       </div>
       <div>
         <Swiper
+          className="h-[500px]"
+          speed={1200}
           modules={[Controller, Navigation]}
           slidesPerView={4}
           centeredSlides={false}
           slidesPerGroup={4}
           spaceBetween={24}
-          loop={true}
           controller={{ control: controlledSwiper }}
           onSwiper={setControlledSwiper}
+          onSlideChange={(swiper) =>
+            setActiveIndex(Math.ceil(swiper.activeIndex / 4) + 1)
+          }
         >
           {items.map((item) => (
             <SwiperSlide key={v4()}>

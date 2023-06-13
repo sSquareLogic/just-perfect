@@ -5,12 +5,20 @@ import DataContext from "@/contexts/DataContext";
 import { ChangeEvent, useContext } from "react";
 import { searchVariants } from "@/animations/search.animations";
 import UIContext from "@/contexts/UIContext";
+import colors from "@/variables/colors";
 
 const SearchBar = () => {
   const { search, setSearch } = useContext(DataContext).search;
   const { searchFocus, setSearchFocus } = useContext(UIContext).searchFocus;
   return (
-    <form className="searchbar justify-self-center flex items-center w-full rounded-3xl bg-GREEN border border-GREEN overflow-hidden">
+    <form
+      className="searchbar justify-self-center flex items-center w-full rounded-3xl bg-GREEN border border-GREEN overflow-hidden transition-all"
+      style={
+        searchFocus
+          ? { background: colors.GREEN_HOVER, borderColor: colors.GREEN_HOVER }
+          : {}
+      }
+    >
       <div className="relative min-w-[320px] w-full">
         <motion.div
           className="absolute top-[50%] -translate-y-[50%] left-6 w-6 h-6 object-contain pointer-events-none"

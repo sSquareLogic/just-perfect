@@ -2,14 +2,9 @@
 import Image from "next/image";
 import CartBtn from "./CartBtn";
 import Link from "next/link";
+import { ICard } from "@/types/data/card.types";
 
-interface IProps {
-  img: string;
-  name: string;
-  price: string;
-}
-
-const Card = ({ img, name, price }: IProps) => {
+const Card = ({ img, name, price }: ICard) => {
   return (
     <Link
       href={"/"}

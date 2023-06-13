@@ -36,6 +36,7 @@ module.exports = {
         FOOTER: "auto 410px",
         HERO: "1fr 1fr",
         TWO_FR: "1fr 1fr",
+        FOUR_FR: "repeat(4, 1fr)",
       },
       boxShadow: {
         CARD: "0px 4px 16px rgba(0, 0, 0, 0.25)",

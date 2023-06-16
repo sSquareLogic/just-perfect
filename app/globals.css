@@ -8,3 +8,7 @@
   margin: 0 auto;
   padding: 0 30px;
 }
+
+.swiper-wrapper {
+  margin: 20px 0;
+}

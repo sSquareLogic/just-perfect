@@ -32,7 +32,7 @@ const CardSwiper = ({ items, title }: IProps) => {
       </div>
       <div>
         <Swiper
-          className="h-[500px]"
+          className="h-[520px]"
           speed={1200}
           modules={[Controller, Navigation]}
           slidesPerView={4}

@@ -8,7 +8,7 @@ import { v4 } from "uuid";
 const Popular = () => {
   return (
     <section className="popular">
-      <Container className="flex flex-col gap-8 py-14">
+      <div className="flex flex-col gap-8 py-14">
         <div className="flex items-center gap-8 justify-between">
           <SectionTitle title="Самые популярные категории" />
           <LinkArrow link="/" text="Смотреть все категории" />
@@ -23,7 +23,7 @@ const Popular = () => {
             />
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 };

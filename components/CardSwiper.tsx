@@ -11,6 +11,7 @@ import { Controller, Navigation } from "swiper";
 import Card from "./card/Card";
 import { v4 } from "uuid";
 import SwiperClass from "swiper";
+import SectionTitle from "./SectionTitle";
 
 interface IProps {
   title?: string;
@@ -23,7 +24,7 @@ const CardSwiper = ({ items, title }: IProps) => {
   return (
     <div className="card-swiper flex flex-col gap-8">
       <div className="flex items-center gap-8 justify-between">
-        <h5 className="text-BLACK text-SM_TITLE font-RW font-bold">{title}</h5>
+        {title ? <SectionTitle title={title} /> : null}
         <PaginationFraction
           swiper={controlledSwiper}
           activeIndex={activeIndex}

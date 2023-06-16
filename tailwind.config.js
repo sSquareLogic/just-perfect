@@ -16,6 +16,9 @@ module.exports = {
         WHITE: "#FFFFFF",
         BG: "#F6F6F6",
       },
+      backgroundImage: {
+        DARKEN: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))",
+      },
       fontSize: {
         TITLE: "40px",
         SM_TITLE: "32px",
@@ -35,7 +38,8 @@ module.exports = {
         HEADER: "1fr 410px 1fr",
         FOOTER: "auto 410px",
         HERO: "1fr 1fr",
-        TWO_FR: "1fr 1fr",
+        TWO_FR: "repeat(2, 1fr)",
+        THREE_FR: "repeat(3, 1fr)",
         FOUR_FR: "repeat(4, 1fr)",
       },
       boxShadow: {

@@ -5,7 +5,7 @@ import { v4 } from "uuid";
 
 const Grid = () => {
   return (
-    <section className="grid-section flex flex-col gap-8">
+    <section className="grid-section flex flex-col gap-8 py-14">
       <SectionTitle
         align="center"
         title="Мы в Instagram @justperfect"

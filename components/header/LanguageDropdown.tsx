@@ -13,7 +13,7 @@ const LanguageDropdown = () => {
 
   return (
     <motion.ul
-      className="language-dropdown absolute right-0 top-[35px] rounded-lg overflow-hidden w-full shadow-lg border border-solid border-BG"
+      className="language-dropdown absolute right-0 top-[35px] rounded-lg overflow-hidden w-full shadow-lg border border-solid border-BG z-30"
       variants={languageVariants}
       animate={languageOpen ? "dropdownActive" : "dropdownRest"}
     >

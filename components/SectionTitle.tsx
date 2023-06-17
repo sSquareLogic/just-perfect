@@ -1,9 +1,10 @@
 interface IProps {
   title: string;
   align?: "left" | "right" | "center";
+  link?: string;
 }
 
-const SectionTitle = ({ title, align = "left" }: IProps) => {
+const SectionTitle = ({ title, align = "left", link }: IProps) => {
   return (
     <h2
       className="section-title text-BLACK text-SM_TITLE font-RW font-bold"
@@ -13,7 +14,13 @@ const SectionTitle = ({ title, align = "left" }: IProps) => {
           : { textAlign: align }
       }
     >
-      {title}
+      {link ? (
+        <a href={link} className="text-inherit">
+          {title}
+        </a>
+      ) : (
+        title
+      )}
     </h2>
   );
 };

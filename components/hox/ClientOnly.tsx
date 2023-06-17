@@ -15,7 +15,7 @@ const ClientOnly = ({ children }: IProps) => {
     else setHasMounted(false);
   }, [isMounted]);
   return (
-    <div className="clientOnlyComponent">{hasMounted ? children : null};</div>
+    <div className="clientOnlyComponent">{hasMounted ? children : null}</div>
   );
 };
 

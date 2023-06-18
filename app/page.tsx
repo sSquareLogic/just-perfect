@@ -7,7 +7,7 @@ import Grid from "@/components/grid/Grid";
 
 const Home = () => {
   return (
-    <main className="main">
+    <main className="home-main">
       <Hero />
       <Container className="mb-10">
         <CartSwiper items={newCards} title="Новинки" />

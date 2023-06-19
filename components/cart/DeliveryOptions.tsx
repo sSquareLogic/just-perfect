@@ -6,7 +6,7 @@ import GreenBtn from "../GreenBtn";
 
 const DeliveryOptions = () => {
   return (
-    <aside className="delivery-options bg-LIGHT_GRAY px-6 py-12 sticky top-2 right-0">
+    <aside className="delivery-options bg-LIGHT_GRAY px-6 py-12 sticky top-4 right-0 h-fit">
       <form
         onSubmit={(e: FormEvent) => e.preventDefault()}
         className="flex flex-col gap-10"

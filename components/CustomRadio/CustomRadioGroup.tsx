@@ -31,6 +31,7 @@ const CustomRadioGroup = ({ items, title }: IProps) => {
               onClick={() => {
                 setIsChecked(item.value);
               }}
+              onChange={() => null}
               className="w-full h-full z-20 absolute top-0 left-0 opacity-0"
             />
           </label>

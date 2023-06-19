@@ -1,5 +1,5 @@
 export interface ICustomRadio {
-  id: string;
+  value: string;
   name: string;
   text: string;
 }

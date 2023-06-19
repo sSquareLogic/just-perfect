@@ -13,6 +13,7 @@ module.exports = {
         GREEN_HOVER: "#98c815",
         BLACK: "#2D2D2D",
         GRAY: "#6A6A6A",
+        LIGHT_GRAY: "#f0f0f0",
         WHITE: "#FFFFFF",
         BG: "#F6F6F6",
       },
@@ -37,6 +38,7 @@ module.exports = {
       gridTemplateColumns: {
         HEADER: "1fr 410px 1fr",
         FOOTER: "auto 410px",
+        CART: "1fr minmax(200px, 525px)",
         HERO: "1fr 1fr",
         TWO_FR: "repeat(2, 1fr)",
         THREE_FR: "repeat(3, 1fr)",

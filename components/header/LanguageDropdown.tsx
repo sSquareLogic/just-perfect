@@ -1,11 +1,11 @@
 "use client";
-import { v4 } from "uuid";
-import { motion } from "framer-motion";
+
 import DataContext from "@/contexts/DataContext";
-import languages from "@/settings/languages";
-import { useContext } from "react";
-import { languageVariants } from "@/animations/language.animations";
 import UIContext from "@/contexts/UIContext";
+import { languageVariants } from "@/animations/language.animations";
+import languages from "@/settings/languages";
+import { motion } from "framer-motion";
+import { useContext } from "react";
 
 const LanguageDropdown = () => {
   const { language, setLanguage } = useContext(DataContext).language;
@@ -17,9 +17,9 @@ const LanguageDropdown = () => {
       variants={languageVariants}
       animate={languageOpen ? "dropdownActive" : "dropdownRest"}
     >
-      {languages.map((lang) => (
+      {languages.map((lang, i) => (
         <motion.li
-          key={v4()}
+          key={i}
           className="p-2 font-GR text-BLACK"
           onClick={() => {
             setLanguage(lang);

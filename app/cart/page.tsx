@@ -1,11 +1,10 @@
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import CartItem from "@/components/cart/CartItem";
 import CartTop from "@/components/cart/CartTop";
-import DeliveryOptions from "@/components/cart/DeliveryOptions";
 import Container from "@/components/Container";
+import DeliveryOptions from "@/components/cart/DeliveryOptions";
 import cartBreadcrumbItems from "@/public/data/breadcrumbs/cart.breadcrumb";
 import { cartItems } from "@/public/data/cart";
-import { v4 } from "uuid";
 
 const Cart = () => {
   return (
@@ -15,13 +14,13 @@ const Cart = () => {
         <CartTop />
         <div className="grid grid-cols-CART gap-12">
           <div className="flex flex-col gap-8">
-            {cartItems.map((cartItem) => (
+            {cartItems.map((cartItem, i) => (
               <CartItem
                 fields={cartItem.fields}
                 name={cartItem.name}
                 quantity={cartItem.quantity}
                 img={cartItem.img}
-                key={v4()}
+                key={i}
               />
             ))}
           </div>

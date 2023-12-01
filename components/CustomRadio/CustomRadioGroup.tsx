@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
+
 import Check from "./Check";
 import { ICustomRadio } from "@/types/customradio.types";
-import { v4 } from "uuid";
 import SmallTitle from "../SmallTitle";
+import { useState } from "react";
 
 interface IProps {
   items: ICustomRadio[];
@@ -16,11 +16,8 @@ const CustomRadioGroup = ({ items, title }: IProps) => {
     <div className="custom-radio-group flex flex-col gap-6">
       {title ? <SmallTitle title={title} /> : null}
       <div className="flex flex-col gap-4">
-        {items.map((item) => (
-          <label
-            className="custom-radio flex items-center gap-4 relative w-full"
-            key={v4()}
-          >
+        {items.map((item, i) => (
+          <label className="custom-radio flex items-center gap-4 relative w-full" key={i}>
             <Check checked={isChecked === item.value} />
             <span className="font-GR text-BLACK text-TEXT">{item.text}</span>
             <input

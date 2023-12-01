@@ -1,6 +1,5 @@
-import { ICartItem } from "@/types/data/cart.types";
 import FieldValue from "./FieldValue";
-import { v4 } from "uuid";
+import { ICartItem } from "@/types/data/cart.types";
 
 interface IProps {
   fields: ICartItem["fields"];
@@ -9,8 +8,8 @@ interface IProps {
 const FieldValueGroup = ({ fields }: IProps) => {
   return (
     <ul className="field-value-group flex flex-col gap-6">
-      {fields.map((field) => (
-        <FieldValue name={field.name} value={field.value} key={v4()} />
+      {fields.map((field, i) => (
+        <FieldValue name={field.name} value={field.value} key={i} />
       ))}
     </ul>
   );
